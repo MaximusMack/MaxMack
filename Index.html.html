@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notebook &mdash; stories by you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EDE7D9;
+    --paper-dim:#E2DBC9;
+    --ink:#24211C;
+    --ink-soft:#5A5548;
+    --moss:#44594B;
+    --rust:#A85C32;
+    --rule:#C9C0A8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top:24px;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:0 24px;}
+  header{padding:48px 0 28px;border-bottom:1px solid var(--rule);}
+  header .wrap{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;}
+  .brand{font-family:'Lora',serif;font-weight:600;font-size:1.5rem;letter-spacing:-0.01em;}
+  nav a{color:var(--ink-soft);text-decoration:none;margin-left:20px;font-size:0.95rem;}
+  nav a:first-child{margin-left:0;}
+  nav a:hover{color:var(--ink);}
+
+  .hero{padding:56px 0 40px;}
+  .hero p.kicker{color:var(--moss);font-family:'Lora',serif;font-style:italic;font-size:1.1rem;margin:0 0 6px;}
+  .hero h1{font-family:'Lora',serif;font-weight:600;font-size:2.3rem;line-height:1.15;margin:0 0 14px;max-width:16ch;}
+  .hero p.sub{color:var(--ink-soft);max-width:52ch;margin:0;}
+
+  section{padding:36px 0;border-bottom:1px solid var(--rule);}
+  section:last-of-type{border-bottom:none;}
+  h2{font-family:'Lora',serif;font-weight:600;font-size:1.4rem;margin:0 0 22px;}
+
+  .story{margin-bottom:28px;}
+  .story:last-child{margin-bottom:0;}
+  .story h3{font-family:'Lora',serif;font-size:1.15rem;margin:0 0 4px;}
+  .story .meta{color:var(--ink-soft);font-size:0.85rem;margin-bottom:10px;}
+  .story p{margin:0 0 10px;max-width:60ch;}
+  .story details summary{cursor:pointer;color:var(--moss);font-size:0.9rem;list-style:none;}
+  .story details summary::-webkit-details-marker{display:none;}
+  .story details summary::before{content:"Read more ↓";}
+  .story details[open] summary::before{content:"Show less ↑";}
+  .story details .full{margin-top:10px;font-family:'Lora',serif;font-size:1.02rem;}
+
+  .reactions{display:flex;gap:8px;margin-top:12px;}
+  .reactions button{
+    font-family:'Inter',sans-serif;font-size:0.85rem;
+    border:1px solid var(--rule);background:transparent;color:var(--ink-soft);
+    border-radius:20px;padding:5px 12px;cursor:pointer;
+  }
+  .reactions button:hover{border-color:var(--moss);color:var(--moss);}
+  .reactions button.on{background:var(--moss);border-color:var(--moss);color:var(--paper);}
+
+  .support-box{
+    background:var(--paper-dim);border:1px solid var(--rule);
+    border-radius:10px;padding:24px;
+  }
+  .support-box p{margin:0 0 16px;color:var(--ink-soft);}
+  .cashtag{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--rust);color:var(--paper);
+    font-family:'Inter',sans-serif;font-weight:600;
+    padding:11px 20px;border-radius:8px;text-decoration:none;font-size:0.98rem;
+  }
+  .cashtag:hover{opacity:0.92;}
+  .support-note{font-size:0.82rem;color:var(--ink-soft);margin-top:14px;}
+
+  .comments-slot{
+    border:1px dashed var(--rule);border-radius:10px;
+    padding:20px;color:var(--ink-soft);font-size:0.9rem;
+  }
+  .comments-slot code{background:var(--paper-dim);padding:1px 5px;border-radius:4px;}
+
+  footer{padding:30px 0 50px;color:var(--ink-soft);font-size:0.85rem;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="brand">Notebook</span>
+    <nav>
+      <a href="#stories">Stories</a>
+      <a href="#support">Support</a>
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero wrap">
+  <p class="kicker">a place I keep what I write</p>
+  <h1>Stories, out loud, one page at a time.</h1>
+  <p class="sub">New pieces go up here first. Read something, tell me what landed, and if you'd like to help keep this going, there's a way to do that below.</p>
+</div>
+
+<section id="stories" class="wrap">
+  <h2>Latest stories</h2>
+
+  <div class="story">
+    <h3>Title of your first story</h3>
+    <div class="meta">Posted Month Day, 2026 &middot; short story</div>
+    <p>Write a one- or two-sentence teaser here &mdash; just enough to pull someone in.</p>
+    <details>
+      <summary></summary>
+      <div class="full">
+        <p>Paste the full story here. Replace this paragraph with your actual text &mdash; this block is set in a serif face sized for comfortable reading.</p>
+      </div>
+    </details>
+    <div class="reactions" data-story="story-1">
+      <button data-reaction="heart">♥ <span class="count">0</span></button>
+      <button data-reaction="fire">🔥 <span class="count">0</span></button>
+      <button data-reaction="cry">😢 <span class="count">0</span></button>
+    </div>
+  </div>
+
+  <div class="story">
+    <h3>Title of your second story</h3>
+    <div class="meta">Posted Month Day, 2026 &middot; short story</div>
+    <p>Another one-line teaser goes here.</p>
+    <details>
+      <summary></summary>
+      <div class="full">
+        <p>Full text of your second story goes here.</p>
+      </div>
+    </details>
+    <div class="reactions" data-story="story-2">
+      <button data-reaction="heart">♥ <span class="count">0</span></button>
+      <button data-reaction="fire">🔥 <span class="count">0</span></button>
+      <button data-reaction="cry">😢 <span class="count">0</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="support" class="wrap">
+  <h2>Support this</h2>
+  <div class="support-box">
+    <p>If a story was worth your time, a tip is always appreciated &mdash; never expected.</p>
+    <a class="cashtag" href="https://cash.app/$YourCashtag" target="_blank" rel="noopener">Send a tip &nbsp;$YourCashtag</a>
+    <p class="support-note">Replace <code>$YourCashtag</code> above with your real Cash App $cashtag, in both the link and the button text.</p>
+  </div>
+</section>
+
+<section id="feedback" class="wrap">
+  <h2>Comments &amp; feedback</h2>
+  <div class="comments-slot">
+    This spot is where reader comments will live, powered by <strong>Giscus</strong> (free, uses GitHub Discussions, no account needed for you to manage). Once your site is hosted on GitHub Pages, follow the setup guide and paste the embed script it gives you right here, replacing this box. It also gives readers built-in reactions, so you can drop the ones above if you'd rather use those.
+  </div>
+</section>
+
+<footer class="wrap">
+  Notebook &mdash; built with care. Edit this page freely; it's plain HTML.
+</footer>
+
+<script>
+  // Per-visitor reaction counts (stored in this browser only — see chat for how to make them shared for every reader).
+  document.querySelectorAll('.reactions').forEach(function(box){
+    const storyId = box.dataset.story;
+    box.querySelectorAll('button').forEach(function(btn){
+      const key = storyId + ':' + btn.dataset.reaction;
+      let count = 0, on = false;
+      try {
+        const saved = JSON.parse(localStorage.getItem(key) || 'null');
+        if (saved) { count = saved.count; on = saved.on; }
+      } catch(e){}
+      btn.querySelector('.count').textContent = count;
+      if (on) btn.classList.add('on');
+      btn.addEventListener('click', function(){
+        on = !on;
+        count += on ? 1 : -1;
+        btn.querySelector('.count').textContent = count;
+        btn.classList.toggle('on', on);
+        try { localStorage.setItem(key, JSON.stringify({count, on})); } catch(e){}
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
